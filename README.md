@@ -20,7 +20,7 @@ Run the doctests to verify that all functions are correct:
 ```
 $ python3 -m doctest palindrome.py
 ```
-Now open the `palindrome.py` file in vim and verify that the doctests are testing all both functions using all three data types.
+Now open the `palindrome.py` file in vim and verify that the doctests are testing all functions using all three data types.
 Read through the implementation of the functions,
 and make sure you understand how they work.
 Take a guess at which one will be faster,
@@ -87,8 +87,8 @@ Complete the following table with actual measured runtimes by substituting the v
 
 |                        | `xs=("1"*65536)` | `xs=([1]*65536)` | `xs=deque([1]*65536)` |
 | ---------------------- | ---------------- | ---------------- | --------------------- |
-| `check_palindrome_1`   |                  |                  |                       |
-| `check_palindrome_2`   |                  |                  |                       |
+| `check_palindrome_1`   |     `5.47 ms`     |     `11.90 ms`   |    `81.7 ms`                   |
+| `check_palindrome_2`   |     `4.44 ms`     |     `7.80 ms`    |    `9.28 ms`                   |
 
 You should observe that one of these entries is significantly slower than the others.
 This tells us that the runtime of a function depends on: (1) the algorithm that it is implemented with, and (2) the data types it is run on.
